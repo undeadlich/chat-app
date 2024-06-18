@@ -46,7 +46,7 @@ export const signup = async (req, res) => {
   }
   catch(error){
     console.log("error signup", error.message);
-    res.status(500).json("Internal Server Error");
+      res.status(500).json({error:"Internal Server Error"});
   }
   };
   
@@ -74,7 +74,7 @@ export const signup = async (req, res) => {
     }
     catch(error){
       console.log("error login", error.message);
-      res.status(500).json("Internal Server Error");
+        res.status(500).json({error:"Internal Server Error"});
     }
   };
   
@@ -85,7 +85,7 @@ export const signup = async (req, res) => {
     }
     catch(error){
       
-      res.status(500).json("Internal Server Error");
+        res.status(500).json({error:"Internal Server Error"});
     }
   };
   
