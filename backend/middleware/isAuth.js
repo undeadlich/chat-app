@@ -15,7 +15,7 @@ const isAuth = async (req,res,next)=>{
     if(!user){
         return res.status(401).json({error:"Unauthorized : User not found"})
     }
-    //console.log("hey");
+   
     req.user = user;
     next();
     }

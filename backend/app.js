@@ -14,7 +14,7 @@ dotenv.config();
 import {app,server} from "./socket/socket.js"
 
 
-const __dirname = path.resolve();
+//const __dirname = path.resolve();
 const PORT = process.env.PORT||5000;
 
 
@@ -25,11 +25,11 @@ app.use("/api/auth",authroutes);
 app.use("/api/messages",messageroutes);
 app.use("/api/users",userroutes);
 
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
+// app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-});
+// app.get("*", (req, res) => {
+// 	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+// });
 
 server.listen(PORT ,() => {
     connectToMongodb();
